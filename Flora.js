@@ -226,17 +226,18 @@ var virus = 100
 if(type == "groupInviteMessage" && m.message.groupInviteMessage.caption.length > 8000||  type == "contactMessage" && m.message.contactMessage.displayName.length > 8000 || type == "imageMessage" && m.message.imageMessage.caption.length > 8000 || budy.length > 8000 && !itsMe  || type == "extendedTextMessage" && virus > 8000 && !itsMe ||  type == "productMessage" && m.message.productMessage.product.description.length > 8000 && !itsMe ||  type == "listMessage" && !itsMe) {
 if(isGroup && isBotGroupAdmins) flora.sendMessage(from, { delete: m.key})
 if(!isGroup) flora.chatModify({ clear: { messages: [{ id: m.id, fromMe: sender == botNumber? true : false, timestamp: m.messageTimestamp }] } }, sender, [])
-console.log(chalk.bgRedBright(color("[ VIRTEXT ]", "black")),`Length: ${budy.length} from ${senderNumber} ${isGroup? `Group ${groupName}`: ""}`)
+console.log(chalk.bgRedBright(color("[ VIRTEX ]", "black")),`Length: ${budy.length} from ${senderNumber} ${isGroup? `Group ${groupName}`: ""}`)
 }
-if (!isGroup && !isCmd ) console.log(color("[PRIVATE]", "greenyellow"), color(moment.tz('Asia/Jakarta').format('HH:mm'), "green"), color(budy, "cyan"), color('dari', 'gold'), color(`${pushname}`, 'orange'))
-if (isGroup && !isCmd ) console.log(color("[GRUP]", "gold"), color(moment.tz('Asia/Jakarta').format('HH:mm'), "green"), color(budy, "cyan"), color('dari', 'gold'), color(`${pushname}`, 'orange'), color('di gc', 'purple'), color(groupName, "deeppink"))
-if (!isGroup && isCmd ) console.log(color("[CMD]", "blue"), color(moment.tz('Asia/Jakarta').format('HH:mm'), "green"), color(`${command} [${args.length}]`, 'cyan'), color('dari', 'gold'), color(`${pushname}`, 'orange'))
-if (isGroup && isCmd ) console.log(color("[CMD]", "blue"), color(moment.tz('Asia/Jakarta').format('HH:mm'), "green"), color(`${command} [${args.length}]`, 'cyan'), color('dari', 'gold'), color(`${pushname}`, 'orange'), color('di gc', 'purple'), color(groupName, "deeppink"))
+if (!isGroup && !isCmd ) console.log(color("[ PRIVATE ]", "greenyellow"), color(moment.tz('Asia/Jakarta').format('HH:mm'), "green"), color(budy, "cyan"), color('dari', 'gold'), color(`${pushname}`, 'orange'))
+if (isGroup && !isCmd ) console.log(color("[ GROUP ]", "gold"), color(moment.tz('Asia/Jakarta').format('HH:mm'), "green"), color(budy, "cyan"), color('dari', 'gold'), color(`${pushname}`, 'orange'), color('di gc', 'purple'), color(groupName, "deeppink"))
+if (!isGroup && isCmd ) console.log(color("[ CMD ]", "blue"), color(moment.tz('Asia/Jakarta').format('HH:mm'), "green"), color(`${command} [${args.length}]`, 'cyan'), color('dari', 'gold'), color(`${pushname}`, 'orange'))
+if (isGroup && isCmd ) console.log(color("[ CMD ]", "blue"), color(moment.tz('Asia/Jakarta').format('HH:mm'), "green"), color(`${command} [${args.length}]`, 'cyan'), color('dari', 'gold'), color(`${pushname}`, 'orange'), color('di gc', 'purple'), color(groupName, "deeppink"))
 //=≠===========
+let waifu = pickRandom(global.waifuImg)
 const newReply = async(teks) =>{ 
 flora.sendMessage(m.chat, {
 	document: fs.readFileSync("./package.json"),
-	fileName: '©𝑭𝒍𝒐𝒓𝒂𝑽𝒊𝒑',
+	fileName: 'Hecate II',
 	mimetype: 'application.pdf',
 	fileLength: 99999999999999,
 	bpageCount: 10909143,	
@@ -246,11 +247,11 @@ forwardingScore: 9999999,
 isForwarded: true, 
       externalAdReply: {
 	showAdAttribution: false,
-	title: '©𝑭𝒍𝒐𝒓𝒂𝑽𝒊𝒑 @By FallXd',
+	title: 'Hecate II',
 	body: `${ucapanWaktu} kak ${pushname}`,
 	previewType:"PHOTO",
 	//caption: `oke Tunggu Bentar kak`,
-	thumbnailUrl: "https://telegra.ph/file/024e828129341d1ef969d.jpg",
+	thumbnailUrl: `${waifu}`,
 
 	//sourceUrl: `${sig}`,
 	}}}, { quoted: m,ephemeralExpiration: 86400});
@@ -265,11 +266,11 @@ contextInfo: {
 isForwarded: true, 
  externalAdReply: {
  showAdAttribution: true,
-  title: '©𝑭𝒍𝒐𝒓𝒂𝑽𝒊𝒑',
+  title: 'Hecate II',
 body: `Hai  ${ucapanWaktu} kak ${pushname}`,
 previewType: "PHOTO",
  thumbnailUrl: photo,
- sourceUrl: 'https://replit.com/@FallXddhoanx'
+ sourceUrl: 'https://natxd.my.id'
    }
   },
  text: teks
@@ -344,7 +345,7 @@ console.log(err)
 }
 const its = await getBuffer (ppimg)
 const dfrply = await reSize(ppimg, 300, 300)
-const vid = { url : `wa.me/6285813708397`, type : "video/mp4" }         
+const vid = { url : `wa.me/6287834993722`, type : "video/mp4" }         
                 
            
             
@@ -394,7 +395,7 @@ let anu = "https://telegra.ph/file/024e828129341d1ef969d.jpg";
     let contextInfo = {
       externalAdReply: {
         showAdAttribution: false,
-        title: "Saved to database",
+        title: "`</> S A V E D  T O  D A T A B A S E </>`",
         mediaType: 1,
         renderLargerThumbnail: true,
         thumbnailUrl: anu,
@@ -481,7 +482,7 @@ clear: false,
 clearTime: 0
 }
 
-//STICKER
+//STICKERS
 const nt = otw
 const stikot = nt[Math.floor(Math.random() * nt.length)]
 const sendSticker = (teks) => {
@@ -559,7 +560,7 @@ if (isGroupAdmins) return setReply('Alah sia admin grup mah bebas yekan :v')
 if(!isBotGroupAdmins) return m.reply ('Bot bukan admin jadi gbisa hapus pesan nya :(')
 if(ownerNumber.includes(sender)) return setReply('Alah sia owner bot mah bebas yekan :v')
 let linkgc = await flora.groupInviteCode(from)
-if (budy.includes(`${linkgc}`)) return m.reply ('Wuanjir kirain link grup lain, huh hampir aja kena kick 😆')
+if (budy.includes(`${linkgc}`)) return m.reply ('kirain link grup lain, huh hampir aja kena kick')
 //if (budy.includes('zin admin') || budy.includes('zinmin') )return setReply('Izin Admin diterima')
 await setReply(` *「 LINK GROUP DETECTED 」*\nKamu mengirimkan link group, maaf saya hapus karena antilink grub aktif`)
 await sleep(2000)
@@ -654,9 +655,9 @@ N:${await flora.getName(i + '@s.whatsapp.net')}\n
 FN:${await flora.getName(i + '@s.whatsapp.net')}\n
 item1.TEL;waid=${i}:${i}\n
 item1.X-ABLabel:Ponsel\n
-item2.EMAIL;type=INTERNET:flora@gmail.com\n
+item2.EMAIL;type=INTERNET:hecateapiofc@gmail.com\n
 item2.X-ABLabel:Email\n
-item3.URL:https://flora.com
+item3.URL:https://natxd.my.id
 item3.X-ABLabel:YouTube\n
 item4.ADR:;;Indonesia;;;;\n
 item4.X-ABLabel:Region\n
